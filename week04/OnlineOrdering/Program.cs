@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 class Program
 {
@@ -28,7 +29,7 @@ class Program
         Console.WriteLine();
         Console.WriteLine(order.GetShippingLabel());
         Console.WriteLine();
-        Console.WriteLine($"Total Price: ${order.GetTotalPrice():F2}");
+        Console.WriteLine($"Total Price: {order.GetTotalPrice().ToString("C", CultureInfo.GetCultureInfo("en-US"))}");
         Console.WriteLine(new string('-', 40));
     }
 }
